@@ -21,7 +21,7 @@ public class MainController {
     @Get("/user-wrong")
     public User getUserWrong() {
         var user = User.builder().name("test").build();
-        log.info("Sending data to pubsub productDto={}", JsonUtil.getStringFromObject(user));
+        log.info("User={}", JsonUtil.getStringFromObject(user));
 
         return user;
     }
@@ -29,7 +29,7 @@ public class MainController {
     @Get("/user-fine")
     public User getUserFine() throws JsonProcessingException {
         var user = User.builder().name("test").build();
-        log.info("Sending data to pubsub productDto={}", mapper.writeValueAsString(user));
+        log.info("User={}", mapper.writeValueAsString(user));
 
         return user;
     }
