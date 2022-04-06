@@ -1,6 +1,7 @@
 package me.jics;
 
 import io.micronaut.core.annotation.Introspected;
+import io.micronaut.core.annotation.ReflectiveAccess;
 import io.micronaut.core.annotation.TypeHint;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -17,10 +18,7 @@ import lombok.extern.jackson.Jacksonized;
 @Getter
 @EqualsAndHashCode
 @ToString(callSuper = true)
-@TypeHint(
-        typeNames = {"me.jics.User$UserBuilder"},
-        accessType = {TypeHint.AccessType.ALL_DECLARED_CONSTRUCTORS, TypeHint.AccessType.ALL_DECLARED_FIELDS, TypeHint.AccessType.ALL_DECLARED_METHODS}
-)
+@ReflectiveAccess
 @Introspected
 @Value
 public class User {

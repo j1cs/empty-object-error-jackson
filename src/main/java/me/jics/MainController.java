@@ -2,6 +2,7 @@ package me.jics;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import io.micronaut.core.annotation.ReflectiveAccess;
 import io.micronaut.http.annotation.*;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

@@ -21,6 +21,8 @@ public class JsonUtil {
 
     public String getStringFromObject(Object obj) {
         try {
+            log.info(obj.toString());
+            log.info(objectMapper.writeValueAsString(obj)); // empty
             return objectMapper.writeValueAsString(obj);
         } catch (JsonProcessingException e) {
             log.error(e.getLocalizedMessage());
